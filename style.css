@@ -1,0 +1,144 @@
+a {
+    text-decoration: none;
+}
+
+.nav-bar{
+    margin-top: 0x;
+    height: 80px;
+    background-color: white;
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+/* right nav elements */
+.right-nav-bar-wrapper{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+/* left nav elements */
+.left-nav-bar-wrapper{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* nav links */
+.nav-links{
+    font-style: normal;
+    padding-right: 20px;
+    color: grey;
+    user-select: none;
+    text-decoration: solid;
+}
+
+.contact-button{
+    height: 50px;
+    width: 150px;
+    margin-right: 10px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(71, 71, 71)
+}
+
+/* icon wrapper */
+.icon-props{
+    height: 30px;
+    width: 30px;
+}
+
+.body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:white;
+}
+
+.my-apps{
+    border: none;
+    margin-right: 10px;
+    background-color: transparent;
+    color: rgb(71, 71, 71);
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.my-apps:hover{
+    color:  rgb(58, 58, 148);
+}
+
+.my-apps:focus{
+    outline: none;
+}
+
+.floating-button{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 360px;
+    justify-items: center;
+    background-color: rgb(71, 71, 71);
+    height:60px;
+    width: 60px;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: inset;
+}
+
+
+.floating-button:hover{
+    background-color:  rgb(58, 58, 148);
+}
+
+.sqrlware-logo{
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(71, 71, 71);
+}
+.text-wrapper{
+    max-width: 50%;
+    align-items: center;
+    align-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(71, 71, 71);
+}
+
+.title{
+    font-size: xxx-large;
+    font-weight: bold;
+}
+
+.sqrlware-logo:hover{
+    color:  rgb(58, 58, 148);
+    cursor: context-menu;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+
+/* .drop-down-warapper{
+    width: 200px;
+    background-color: aquamarine;
+    position: relative;
+} */
+
+.contact-button:hover{
+    background-color: rgb(58, 58, 148);
+}
+.nav-links:hover{
+    color: rgb(58, 58, 148);
+}
