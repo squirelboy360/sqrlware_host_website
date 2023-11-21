@@ -5,7 +5,7 @@ a {
 .nav-bar{
     margin-top: 0x;
     height: 80px;
-    background-color: white;
+    background-color: whitesmoke;
     display: flex;
    justify-content: space-between;
    align-items: center;
@@ -51,7 +51,7 @@ a {
 
 .body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:white;
+    background-color:whitesmoke;
 }
 
 .my-apps{
@@ -126,7 +126,6 @@ a {
 .home{
     display: flex;
     justify-content: center;
-    background-color: whitesmoke;
 }
 
 
