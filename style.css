@@ -1,6 +1,8 @@
 a {
     text-decoration: none;
+    color: rgb(71, 71, 71);
 }
+
 
 .nav-bar{
     margin-top: 0x;
@@ -28,7 +30,7 @@ a {
 .nav-links{
     font-style: normal;
     padding-right: 20px;
-    color: grey;
+    color: rgb(71, 71, 71);
     user-select: none;
     text-decoration: solid;
 }
@@ -54,6 +56,7 @@ a {
     background-color:whitesmoke;
 }
 
+/* my-apps drop down */
 .my-apps{
     border: none;
     margin-right: 10px;
@@ -72,6 +75,7 @@ a {
     outline: none;
 }
 
+/* floating action button */
 .floating-button{
     float: right;
     display: flex;
@@ -95,6 +99,7 @@ a {
     background-color:  rgb(58, 58, 148);
 }
 
+/* app-bar logo */
 .sqrlware-logo{
     margin-left: 30px;
     font-size: 25px;
@@ -102,8 +107,14 @@ a {
     font-family: 'Courier New', Courier, monospace;
     color: rgb(71, 71, 71);
 }
+
+.sqrlware-logo:hover{
+    color:  rgb(58, 58, 148);
+    cursor: context-menu;
+}
+/* text wrapper for section */
 .text-wrapper{
-    max-width: 50%;
+    max-width: 100%;
     align-items: center;
     align-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -113,27 +124,57 @@ a {
     color: rgb(71, 71, 71);
 }
 
+/* title for section */
 .title{
     font-size: xxx-large;
     font-weight: bold;
 }
 
-.sqrlware-logo:hover{
-    color:  rgb(58, 58, 148);
-    cursor: context-menu;
-}
-
+/* home style for section */
 .home{
     display: flex;
     justify-content: center;
 }
 
+/* help-me style for section */
+.help-me{
+    display: flex;
+    justify-content: end;
+    margin-right: 5%;
+}
 
-/* .drop-down-warapper{
-    width: 200px;
-    background-color: aquamarine;
-    position: relative;
-} */
+/* mockup-image styling */
+.mockup-sample{
+    height: 60dvh;
+    width: 30dvh;
+}
+
+.redirect-button{
+    margin-top: 50px;
+    height: 50px;
+    width: 150px;
+    margin-right: 10px;
+    color: white;
+    border-radius: 10px;
+    border: 5;
+    border-color: rgb(71, 71, 71);;
+    background-color: rgb(57, 177, 57)
+}
+
+.redirect-button:hover{
+    background-color:  rgb(71, 71, 71);
+}
+
+.redirect-wrapper{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.arrow-img{
+    height: 10%;
+}
 
 .contact-button:hover{
     background-color: rgb(58, 58, 148);
