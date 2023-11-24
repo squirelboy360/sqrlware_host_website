@@ -5,8 +5,10 @@ a {
 
 
 .nav-bar{
-    margin-top: 0x;
+    position: fixed;
     height: 80px;
+    width: 100%;
+    z-index: 100;
     background-color: whitesmoke;
     display: flex;
    justify-content: space-between;
@@ -126,7 +128,7 @@ a {
 
 /* title for section */
 .title{
-    font-size: xxx-large;
+    font-size: xx-large;
     font-weight: bold;
 }
 
@@ -146,7 +148,7 @@ a {
 /* mockup-image styling */
 .mockup-sample{
     height: 60dvh;
-    width: 30dvh;
+    width: 100dvh;
 }
 
 .redirect-button{
