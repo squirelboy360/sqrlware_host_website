@@ -1,70 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/scripts/main.js">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <title>Sqrlware</title>
-</head>
-<body class="body">
-    <nav class="nav-bar">
-      <div class="left-nav-bar-wrapper">
-        <a href="#home" class="sqrlware-logo">
-            Sqrlware
-        </a>
-      </div>
-      <a href="#theme-dark">
-        <img src="/assets/theme_modes/1.svg" alt="theme" class="icon-props"> Theme
-      </a>
-        <div class="right-nadrop-down-warapperv-bar-wrapper">
-            <select name="my-apps"  class="my-apps">
-                <option value="landing-page">Sqrlware</option>
-                <option value="trackif">TrackIf</option>
-                <option value="looklens">LookLens</option>
-            </select>
-            <a href="https://github.com/squirelboy360/" class="nav-links" >
-                <img src="assets/git.svg" alt="Github" class="icon-props"> 
-             </a>
-            <button href="#contact" class="contact-button">
-                Contact
-            </button>
-        </div>
-    </nav>
-    <!-- floating action button -->
-    <div class="floating-button">
-        <img src="/assets/chat.svg" alt="chat bot" class="icon-props">
-    </div>
-    <!-- home UI -->
-    <section class="home">
-       <div class="col-lg-4 mt-4">
-        <div class="title">
-            Real life problem-solving apps
-        </div>
-        <div class="sub-title">
-            From fitness trackers to AI driven day to day life coachers, our goal is to solve your problems and make your dream apps accessible to your figertips.
-        </div>
+    <meta property="og:title" content="Sqrlware" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="public/sqrl.png"
+      type="icon/png"
+      sizes="32x32"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <nav class="navbar-navbar navbar-root-class-name">
+          <div class="navbar-nav-content">
+            <a
+              href="https://github.com/squirelboy360"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="navbar-link"
+            >
+              <div class="navbar-nav-links">
+                <span class="nav-link">Github</span>
+              </div>
+            </a>
+            <a href="#apps" class="navbar-link2">
+              <div class="navbar-get-started get-started">
+                <span class="navbar-text">Apps</span>
+              </div>
+            </a>
+            <div id="open-mobile-menu" class="navbar-hamburger get-started">
+              <img
+                alt="image"
+                src="public/Icons/hamburger-200h.png"
+                class="navbar-image"
+              />
+            </div>
+          </div>
+          <div id="mobile-menu" class="navbar-mobile-menu">
+            <div class="navbar-branding">
+              <img
+                alt="image"
+                src="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
+                class="navbar-image1"
+              />
+              <div id="close-mobile-menu" class="navbar-container">
+                <svg viewBox="0 0 1024 1024" class="navbar-icon">
+                  <path
+                    d="M225.835 286.165l225.835 225.835-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.835-225.835 225.835 225.835c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-225.835-225.835 225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.835 225.835-225.835-225.835c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="navbar-nav-links1">
+              <span class="nav-link">Features</span>
+              <span class="nav-link">Why us</span>
+              <span class="nav-link">Prices</span>
+              <span class="nav-link">Contact</span>
+            </div>
+            <div class="get-started">
+              <span class="navbar-text1">Get started</span>
+            </div>
+          </div>
+          <div>
+            <div class="navbar-container2">
+              <script defer="">
+                    /*
+                Mobile menu - Code Embed
+                */
+
+                /* listenForUrlChangesMobileMenu() makes sure that if you changes pages inside your app,
+                the mobile menu will still work*/
+
+                const listenForUrlChangesMobileMenu = () => {
+                    let url = location.href;
+                    document.body.addEventListener('click', () => {
+                        requestAnimationFrame(() => {
+                            if (url !== location.href) {
+                                runMobileMenuCodeEmbed();
+                                url = location.href;
+                            }
+                        });
+                    },
+                    true
+                    );
+                };
+
+                const runMobileMenuCodeEmbed = () => {
+                    // Mobile menu
+                    const mobileMenu = document.querySelector('#mobile-menu')
+
+                    // Buttons
+                    const closeButton = document.querySelector('#close-mobile-menu')
+                    const openButton = document.querySelector('#open-mobile-menu')
+
+                    // On openButton click, set the mobileMenu position left to -100vw
+                    openButton && openButton.addEventListener('click', function() {
+                        mobileMenu.style.transform = 'translateX(0%)'
+                    })
+
+                    // On closeButton click, set the mobileMenu position to 0vw
+                    closeButton && closeButton.addEventListener('click', function() {
+                        mobileMenu.style.transform = 'translateX(100%)'
+                    })
+                }
+
+                runMobileMenuCodeEmbed()
+                listenForUrlChangesMobileMenu()
+              </script>
+            </div>
+          </div>
+        </nav>
+        <section class="home-section">
+          <div class="home-hero">
+            <div class="home-content">
+              <main class="home-main">
+                <header class="home-header">
+                  <h1 class="home-heading">
+                    Cutting-edge and quality apps that solves real life
+                    problems.
+                  </h1>
+                  <span class="home-caption">
+                    <span class="home-text">
+                      As an app developer who prioritizes quality and function
+                      over any other thing, I aim at assuring users the
+                      provision of exactly that in all the apps I produce.
+                      Cheers 🥂
+                    </span>
+                    <br />
+                  </span>
+                </header>
+                <div class="home-container1">
+                  <a
+                    href="https://mail.google.com/mail/u/0/?fs=1&amp;to=squirelwares@gmail.com&amp;su=Enquiries&amp;body=Hey%20Tahiru,&amp;tf=cm"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link"
+                  >
+                    <div class="home-get-started button">
+                      <span class="home-text2">Contact</span>
+                    </div>
+                  </a>
+                </div>
+              </main>
+            </div>
+            <div class="home-image"></div>
+          </div>
+        </section>
+        <section id="apps" class="home-section1">
+          <header class="home-header1">
+            <h2 class="home-text3">Showcase</h2>
+            <span class="home-text4">
+              Out of all the apps I developed for large and small businesses,
+              these are the handpicked ones that provides users with the best
+              quality, function and UX.
+            </span>
+          </header>
+          <section class="home-note">
+            <div class="home-image1">
+              <img
+                alt="image"
+                src="public/SectionImages/subject-900h.png"
+                class="home-image2"
+              />
+            </div>
+            <div class="home-content1">
+              <div class="home-main1">
+                <div class="home-caption1">
+                  <span class="section-head">trackIf v1.0.0</span>
+                </div>
+                <div class="home-heading1">
+                  <h2 class="section-heading">Rep for rep fitness counter</h2>
+                  <p class="section-description">
+                    TrackIf utilizes your phone's sensors&nbsp; to count
+                    workouts such as pushups and more to be supported in yet to
+                    come updates.
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://mail.google.com/mail/u/0/?fs=1&amp;to=squirelwares@gmail.com&amp;su=TrackIf%20v1.0.0%20Tester&amp;body=Hey%20Tahiru,&amp;tf=cm"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="home-link1"
+              >
+                <div id="waitlist" class="home-get-started1 button">
+                  <span class="home-text5">Join Waitlist</span>
+                </div>
+              </a>
+            </div>
+          </section>
+        </section>
+        <section id="goals" class="home-section3">
+          <div class="home-note1">
+            <div class="home-content2">
+              <div class="home-heading3">
+                <div class="home-header2">
+                  <h2 class="section-heading">Goals</h2>
+                </div>
+                <div class="accordion-accordion accordion-root-class-name">
+                  <div
+                    data-role="accordion-container"
+                    class="accordion-element"
+                  >
+                    <div class="accordion-details">
+                      <span class="accordion-text">
+                        Solve Real-Life Problems
+                      </span>
+                      <span
+                        data-role="accordion-content"
+                        class="accordion-text01"
+                      >
+                        Because function is one of my top most priorities, I aim
+                        at solving real life problems users face based on
+                        personal experiences.
+                      </span>
+                    </div>
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      data-role="accordion-icon"
+                      class="accordion-icon"
+                    >
+                      <path
+                        d="M366 708l196-196-196-196 60-60 256 256-256 256z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div
+                    data-role="accordion-container"
+                    class="accordion-element1 accordion-element"
+                  >
+                    <div class="accordion-details1">
+                      <span class="accordion-text02">
+                        <span class="accordion-text03">
+                          Create A Community Of users That Follow&nbsp;
+                        </span>
+                        <br />
+                        <span>My Work</span>
+                        <br />
+                      </span>
+                      <span
+                        data-role="accordion-content"
+                        class="accordion-text07"
+                      >
+                        A community that shares ideas, discuss and contribute to
+                        the improvement of my apps.&nbsp;
+                      </span>
+                    </div>
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      data-role="accordion-icon"
+                      class="accordion-icon2"
+                    >
+                      <path
+                        d="M366 708l196-196-196-196 60-60 256 256-256 256z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div
+                    data-role="accordion-container"
+                    class="accordion-element2 accordion-element"
+                  >
+                    <div class="accordion-details2">
+                      <span class="accordion-text08">Satisfy Users</span>
+                      <span
+                        data-role="accordion-content"
+                        class="accordion-text09"
+                      >
+                        From feedbacks from users and bug reports, my goal is to
+                        improve my apps to your wishes to keep this community
+                        going.&nbsp;
+                      </span>
+                    </div>
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      data-role="accordion-icon"
+                      class="accordion-icon4"
+                    >
+                      <path
+                        d="M366 708l196-196-196-196 60-60 256 256-256 256z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <div>
-            <img src="/assets/intro_phone.png" alt="phone-1" class="mockup-sample">
-            <div class="redirect-wrapper">
-                <button class="redirect-button" onclick="alert('sample')">Build it for me</button>
-                <img src="/assets/arrow.svg" alt="redirect" class="arrow-img">
-            </div>
+          <div class="home-container3">
+            <script>
+                  /*
+              Accordion - Code Embed
+              */
+
+              /* listenForUrlChangesAccordion() makes sure that if you changes pages inside your app,
+              the Accordions will still work*/
+
+              const listenForUrlChangesAccordion = () => {
+                    let url = location.href;
+                    document.body.addEventListener(
+                      'click',
+                      () => {
+                        requestAnimationFrame(() => {
+                          if (url !== location.href) {
+                            runAccordionCodeEmbed();
+                            url = location.href;
+                          }
+                        });
+                      },
+                      true
+                    );
+                  };
+
+
+              const runAccordionCodeEmbed = () => {
+                  const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); // All accordion containers
+                  const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
+                  const accordionIcons = document.querySelectorAll('[data-role='accordion-icon']'); // All accordion icons
+
+                  accordionContents.forEach((accordionContent) => {
+                      accordionContent.style.display = 'none'; //Hides all accordion contents
+                  });
+
+                  accordionContainers.forEach((accordionContainer, index) => {
+                      accordionContainer.addEventListener('click', () => {
+                          accordionContents.forEach((accordionContent) => {
+                          accordionContent.style.display = 'none'; //Hides all accordion contents
+                          });
+
+                          accordionIcons.forEach((accordionIcon) => {
+                              accordionIcon.style.transform = 'rotate(0deg)'; // Resets all icon transforms to 0deg (default)
+                          });
+
+                          accordionContents[index].style.display = 'flex'; // Shows accordion content
+                          accordionIcons[index].style.transform = 'rotate(180deg)'; // Rotates accordion icon 180deg
+                      });
+                  });
+              }
+
+              runAccordionCodeEmbed()
+              listenForUrlChangesAccordion()
+
+              /*
+              Here's what the above is doing:
+                  1. Selects all accordion containers, contents, and icons
+                  2. Hides all accordion contents
+                  3. Adds an event listener to each accordion container
+                  4. When an accordion container is clicked, it:
+                      - Hides all accordion contents
+                      - Resets all icon transforms to 0deg (default)
+                      - Checks if this container has class 'accordion-open'
+                          - If it does, it removes class 'accordion-open'
+                          - If it doesn't, it:
+                              - Removes class 'accordion-open' from all containers
+                              - Adds class 'accordion-open' to this container
+                              - Shows accordion content
+                              - Rotates accordion icon 180deg
+              */
+            </script>
+          </div>
         </div>
-       </div>
-    </section> 
-    <!-- let us do it for you -->
-    <section id="help-me" class="help-me">
-        <div class="text-wrapper">
-            <div class="title">
-                Let's Build It For You
-            </div>
-            <div class="sub-title">
-               Apart from being a stand-alone start-up, we can help you build your apps.
-              <p>Give us a try</p>
-            </div>
-           </div>
-    </section>
-</body>
+      </div>
+    </div>
+  </body>
 </html>
