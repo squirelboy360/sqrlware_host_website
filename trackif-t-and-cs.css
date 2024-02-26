@@ -1,0 +1,1014 @@
+.trackif-t-and-cs-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000000;
+}
+.trackif-t-and-cs-main {
+  gap: var(--dl-space-space-threeunits);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.trackif-t-and-cs-header {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.trackif-t-and-cs-heading {
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-style: normal;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.trackif-t-and-cs-caption {
+  color: rgb(255, 255, 255);
+  width: 50%;
+  font-size: 20px;
+  font-family: "Poppins";
+  line-height: 30px;
+}
+.trackif-t-and-cs-container1 {
+  flex: 0 0 auto;
+  width: auto;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+@media(max-width: 991px) {
+  .trackif-t-and-cs-main {
+    align-items: center;
+  }
+  .trackif-t-and-cs-heading {
+    text-align: left;
+  }
+  .trackif-t-and-cs-caption {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text01 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text02 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text04 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text05 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text07 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text08 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text10 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text11 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text13 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text14 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text16 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text17 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text19 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text20 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text22 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text23 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text25 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text26 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text28 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text29 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text31 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text32 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text34 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text35 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text37 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text38 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text40 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text41 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text43 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text44 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text46 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text47 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text49 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text50 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text52 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text53 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text55 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text56 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text58 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text59 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text61 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text62 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text64 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text65 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text67 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text68 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text70 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text71 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text73 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text74 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text76 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text77 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text79 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text80 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text82 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text83 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text85 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text86 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text88 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text89 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text91 {
+    text-align: left;
+  }
+  .trackif-t-and-cs-text92 {
+    text-align: left;
+  }
+}
+@media(max-width: 767px) {
+  .trackif-t-and-cs-heading {
+    font-size: 40px;
+  }
+  .trackif-t-and-cs-caption {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text01 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text02 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text04 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text05 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text07 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text08 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text10 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text11 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text13 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text14 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text16 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text17 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text19 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text20 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text22 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text23 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text25 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text26 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text28 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text29 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text31 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text32 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text34 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text35 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text37 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text38 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text40 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text41 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text43 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text44 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text46 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text47 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text49 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text50 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text52 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text53 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text55 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text56 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text58 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text59 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text61 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text62 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text64 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text65 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text67 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text68 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text70 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text71 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text73 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text74 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text76 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text77 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text79 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text80 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text82 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text83 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text85 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text86 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text88 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text89 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text91 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text92 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+}
+@media(max-width: 479px) {
+  .trackif-t-and-cs-header {
+    align-items: flex-start;
+  }
+  .trackif-t-and-cs-heading {
+    max-width: 280px;
+    align-self: center;
+  }
+  .trackif-t-and-cs-caption {
+    color: rgb(255, 255, 255);
+    width: 80%;
+    font-size: 20px;
+    align-self: center;
+    font-family: Poppins;
+    line-height: 30px;
+  }
+  .trackif-t-and-cs-text01 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text02 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text04 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text05 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text07 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text08 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text10 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text11 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text13 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text14 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text16 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text17 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text19 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text20 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text22 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text23 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text25 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text26 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text28 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text29 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text31 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text32 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text34 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text35 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text37 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text38 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text40 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text41 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text43 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text44 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text46 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text47 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text49 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text50 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text52 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text53 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text55 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text56 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text58 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text59 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text61 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text62 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text64 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text65 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text67 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text68 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text70 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text71 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text73 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text74 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text76 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text77 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text79 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text80 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text82 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text83 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text85 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text86 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text88 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text89 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text91 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+  .trackif-t-and-cs-text92 {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 24px;
+  }
+}
