@@ -65,17 +65,17 @@
     />
     <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
     <link
@@ -107,79 +107,6 @@
               </div>
             </a>
           </div>
-          <div id="mobile-menu" class="navbar-mobile-menu">
-            <div class="navbar-branding">
-              <img
-                alt="image"
-                src="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
-                class="navbar-image"
-              />
-              <div id="close-mobile-menu" class="navbar-container">
-                <svg viewBox="0 0 1024 1024" class="navbar-icon">
-                  <path
-                    d="M225.835 286.165l225.835 225.835-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.835-225.835 225.835 225.835c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-225.835-225.835 225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.835 225.835-225.835-225.835c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-            <div class="navbar-nav-links1">
-              <span class="nav-link">Features</span>
-              <span class="nav-link">Why us</span>
-              <span class="nav-link">Prices</span>
-              <span class="nav-link">Contact</span>
-            </div>
-            <div class="get-started">
-              <span class="navbar-text1">Get started</span>
-            </div>
-          </div>
-          <div>
-            <div class="navbar-container2">
-              <script defer="">
-                    /*
-                Mobile menu - Code Embed
-                */
-
-                /* listenForUrlChangesMobileMenu() makes sure that if you changes pages inside your app,
-                the mobile menu will still work*/
-
-                const listenForUrlChangesMobileMenu = () => {
-                    let url = location.href;
-                    document.body.addEventListener('click', () => {
-                        requestAnimationFrame(() => {
-                            if (url !== location.href) {
-                                runMobileMenuCodeEmbed();
-                                url = location.href;
-                            }
-                        });
-                    },
-                    true
-                    );
-                };
-
-                const runMobileMenuCodeEmbed = () => {
-                    // Mobile menu
-                    const mobileMenu = document.querySelector('#mobile-menu')
-
-                    // Buttons
-                    const closeButton = document.querySelector('#close-mobile-menu')
-                    const openButton = document.querySelector('#open-mobile-menu')
-
-                    // On openButton click, set the mobileMenu position left to -100vw
-                    openButton && openButton.addEventListener('click', function() {
-                        mobileMenu.style.transform = 'translateX(0%)'
-                    })
-
-                    // On closeButton click, set the mobileMenu position to 0vw
-                    closeButton && closeButton.addEventListener('click', function() {
-                        mobileMenu.style.transform = 'translateX(100%)'
-                    })
-                }
-
-                runMobileMenuCodeEmbed()
-                listenForUrlChangesMobileMenu()
-              </script>
-            </div>
-          </div>
         </nav>
         <section class="home-section">
           <div class="home-hero">
@@ -202,7 +129,7 @@
                 </header>
                 <div class="home-container1">
                   <a
-                    href="https://mail.google.com/mail/u/0/?fs=1&amp;to=squirelwares@gmail.com&amp;su=Enquiries&amp;body=Hey%20Tahiru,&amp;tf=cm"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdsSX6fPbUCg_5bMsxgNA9HhGQkzQ7yTZp1sKLowG2Mj3e7sA/viewform?usp=sf_link"
                     target="_blank"
                     rel="noreferrer noopener"
                     class="home-link"
@@ -252,7 +179,7 @@
                 </div>
                 <div class="home-container4">
                   <a
-                    href="https://mail.google.com/mail/u/0/?fs=1&amp;to=squirelwares@gmail.com&amp;su=TrackIf%20v1.0.0%20Tester&amp;body=Hey%20Tahiru, I would love to participate in the testing of TrackIf. Kind Regards &amp;tf=cm"
+                    href="https://forms.gle/PHvs23EoPMUmAuuq5"
                     target="_blank"
                     rel="noreferrer noopener"
                     class="home-link1"
@@ -367,80 +294,6 @@
             </div>
           </div>
         </section>
-        <div>
-          <div class="home-container6">
-            <script>
-                  /*
-              Accordion - Code Embed
-              */
-
-              /* listenForUrlChangesAccordion() makes sure that if you changes pages inside your app,
-              the Accordions will still work*/
-
-              const listenForUrlChangesAccordion = () => {
-                    let url = location.href;
-                    document.body.addEventListener(
-                      'click',
-                      () => {
-                        requestAnimationFrame(() => {
-                          if (url !== location.href) {
-                            runAccordionCodeEmbed();
-                            url = location.href;
-                          }
-                        });
-                      },
-                      true
-                    );
-                  };
-
-
-              const runAccordionCodeEmbed = () => {
-                  const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); //All accordion containers
-                  const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
-                  const accordionIcons = document.querySelectorAll('[data-role='accordion-icon']'); // All accordion icons
-
-                  accordionContents.forEach((accordionContent) => {
-                      accordionContent.style.display = 'none'; //Hides all accordion contents
-                  });
-
-                  accordionContainers.forEach((accordionContainer, index) => {
-                      accordionContainer.addEventListener('click', () => {
-                          accordionContents.forEach((accordionContent) => {
-                          accordionContent.style.display = 'none'; //Hides all accordion contents
-                          });
-
-                          accordionIcons.forEach((accordionIcon) => {
-                              accordionIcon.style.transform = 'rotate(0deg)'; // Resets all icon transforms to 0deg (default)
-                          });
-
-                          accordionContents[index].style.display = 'flex'; // Shows accordion content
-                          accordionIcons[index].style.transform = 'rotate(180deg)'; // Rotates accordion icon 180deg
-                      });
-                  });
-              }
-
-              runAccordionCodeEmbed()
-              listenForUrlChangesAccordion()
-
-              /*
-              Here's what the above is doing:
-                  1. Selects all accordion containers, contents, and icons
-                  2. Hides all accordion contents
-                  3. Adds an event listener to each accordion container
-                  4. When an accordion container is clicked, it:
-                      - Hides all accordion contents
-                      - Resets all icon transforms to 0deg (default)
-                      - Checks if this container has class 'accordion-open'
-                          - If it does, it removes class 'accordion-open'
-                          - If it doesn't, it:
-                              - Removes class 'accordion-open' from all containers
-                              - Adds class 'accordion-open' to this container
-                              - Shows accordion content
-                              - Rotates accordion icon 180deg
-              */
-            </script>
-          </div>
-        </div>
       </div>
     </div>
   </body>
