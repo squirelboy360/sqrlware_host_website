@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        .phase {
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            background: #fff;
+        }
+        .project {
+            border-left: 4px solid #3b82f6;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background: #f8fafc;
+        }
+        .resources {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        .tracker-header {
+            position: sticky;
+            top: 0;
+            background: #1e40af;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .progress-bar {
+            width: 200px;
+            height: 20px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #4ade80;
+            transition: width 0.3s ease;
+        }
+        .task-checkbox {
+            margin-right: 10px;
+        }
+        .task-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+        .tracker-panel {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            max-height: 80vh;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+            width: 80%;
+            max-width: 600px;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 999;
+        }
+        .close-tracker {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        h1 { color: #1e3a8a; }
+        h2 { color: #1e40af; }
+        h3 { color: #2563eb; }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+        
+        @keyframes celebrate {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .shake {
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .celebrate {
+            animation: celebrate 0.5s ease-in-out;
+        }
+
+        .streak-counter {
+            background: #4ade80;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .login-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .login-panel {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .confirmation-modal {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button-primary {
+            background: #4ade80;
+            color: white;
+        }
+
+        .button-secondary {
+            background: #ef4444;
+            color: white;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #4ade80;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: fall 1s linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Add these to the existing styles */
+        .daily-checkin {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .calendar-day.completed {
+            background: #4ade80;
+            color: white;
+        }
+
+        .calendar-day.today {
+            border-color: #3b82f6;
+            border-width: 2px;
+        }
+
+        .achievement {
+            padding: 10px;
+            background: #f8fafc;
+            border-radius: 4px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .achievement-icon {
+            width: 30px;
+            height: 30px;
+            background: #4ade80;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .notification-request {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3b82f6;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: none;
+            z-index: 2000;
+        }
+    </style>
+</head>
+<body>
+    
+   <!-- Add notification permission request -->
+   <div class="notification-request" id="notificationRequest">
+    <p>Enable notifications to track your progress better!</p>
+    <button onclick="requestNotificationPermission()" class="button button-primary">Enable Notifications</button>
+    <button onclick="hideNotificationRequest()" class="button button-secondary">Not Now</button>
+</div>
+
+    <div class="tracker-header">
+        <div>
+            <h2 style="margin: 0;">Learning Progress</h2>
+            <p style="margin: 5px 0 0 0">Track your programming journey</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <div style="text-align: right; margin-top: 5px;">
+                    <span id="progressText">0%</span> Complete
+                </div>
+            </div>
+            <button onclick="showTracker()" style="padding: 8px 16px; background: #4ade80; border: none; border-radius: 4px; color: white; cursor: pointer;">
+                View Progress
+            </button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="tracker-panel" id="trackerPanel">
+        <button class="close-tracker" onclick="hideTracker()">×</button>
+        <h2>Progress Tracker</h2>
+        <div id="trackerContent"></div>
+    </div>
+
+    <h1>Complete Learning Roadmap: Python & C++</h1>
+    
+    <div class="phase">
+        <h2>Phase 1: Foundation (Weeks 1-2)</h2>
+        <h3>Setup & Tools</h3>
+        <div class="resources">
+            <strong>Required Tools:</strong>
+            <ul>
+                <li>Python: Download from python.org</li>
+                <li>C++: Install Visual Studio Code + MinGW compiler</li>
+                <li>VS Code Extensions: Python, C/C++</li>
+            </ul>
+        </div>
+
+        <h3>Week 1: Python Basics</h3>
+        <div class="resources">
+            <strong>Learning Resources:</strong>
+            <ul>
+                <li>FreeCodeCamp's Python Beginner Course (YouTube)</li>
+                <li>Python Documentation: docs.python.org</li>
+                <li>W3Schools Python Tutorial</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h4>Day 1-2: Hello Python</h4>
+            <ul>
+                <li>Project: Simple Calculator
+                    <ul>
+                        <li>Learn: Variables, data types, input/output</li>
+                        <li>Features: Addition, subtraction, multiplication, division</li>
+                        <li>Challenge: Add support for decimals</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h4>Day 3-4: Control Flow</h4>
+            <ul>
+                <li>Project: Number Guessing Game
+                    <ul>
+                        <li>Learn: if/else, while loops, random numbers</li>
+                        <li>Features: Generate random number, track attempts</li>
+                        <li>Challenge: Add difficulty levels</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h4>Day 5-7: Data Structures</h4>
+            <ul>
+                <li>Project: Todo List Manager
+                    <ul>
+                        <li>Learn: Lists, dictionaries, file handling</li>
+                        <li>Features: Add, remove, mark complete</li>
+                        <li>Challenge: Save to file</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="phase">
+        <h2>Phase 2: C++ Foundations (Weeks 3-4)</h2>
+        <div class="resources">
+            <strong>Learning Resources:</strong>
+            <ul>
+                <li>learncpp.com</li>
+                <li>C++ Primer (book)</li>
+                <li>The Cherno C++ Series (YouTube)</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h4>Day 1-3: C++ Basics</h4>
+            <ul>
+                <li>Project: Temperature Converter
+                    <ul>
+                        <li>Learn: Variables, input/output, functions</li>
+                        <li>Features: Convert C to F and vice versa</li>
+                        <li>Challenge: Add Kelvin conversion</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h4>Day 4-5: Arrays and Loops</h4>
+            <ul>
+                <li>Project: Grade Calculator
+                    <ul>
+                        <li>Learn: Arrays, loops, functions</li>
+                        <li>Features: Calculate average, min, max</li>
+                        <li>Challenge: Add grade distribution</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h4>Day 6-7: Introduction to OOP</h4>
+            <ul>
+                <li>Project: Bank Account Manager
+                    <ul>
+                        <li>Learn: Classes, objects, methods</li>
+                        <li>Features: Deposit, withdraw, check balance</li>
+                        <li>Challenge: Add multiple accounts</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="phase">
+        <h2>Phase 3: Intermediate Projects (Weeks 5-6)</h2>
+        
+        <h3>Python Advanced Concepts</h3>
+        <div class="project">
+            <h4>Week 5: Data Processing</h4>
+            <ul>
+                <li>Project: Weather Data Analyzer
+                    <ul>
+                        <li>Learn: APIs, JSON, error handling</li>
+                        <li>Features: Fetch and display weather data</li>
+                        <li>Challenge: Add weather forecasting</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3>C++ Advanced Concepts</h3>
+        <div class="project">
+            <h4>Week 6: File Management</h4>
+            <ul>
+                <li>Project: Text File Editor
+                    <ul>
+                        <li>Learn: File I/O, string manipulation</li>
+                        <li>Features: Read, write, search text</li>
+                        <li>Challenge: Add find and replace</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="phase">
+        <h2>Phase 4: Advanced Projects (Weeks 7-8)</h2>
+        
+        <div class="project">
+            <h4>Python: Final Project</h4>
+            <ul>
+                <li>Contact Management System
+                    <ul>
+                        <li>Learn: Database integration, GUI</li>
+                        <li>Features: CRUD operations, search</li>
+                        <li>Challenge: Add export to CSV</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h4>C++: Final Project</h4>
+            <ul>
+                <li>Library Management System
+                    <ul>
+                        <li>Learn: Advanced OOP, file handling</li>
+                        <li>Features: Book checkout, return</li>
+                        <li>Challenge: Add member management</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+           // Add notification handling
+           function checkNotificationPermission() {
+            if ("Notification" in window) {
+                if (Notification.permission !== "granted" && Notification.permission !== "denied") {
+                    document.getElementById('notificationRequest').style.display = 'block';
+                }
+            }
+        }
+
+        function hideNotificationRequest() {
+            document.getElementById('notificationRequest').style.display = 'none';
+        }
+
+        function requestNotificationPermission() {
+            Notification.requestPermission().then(function(permission) {
+                hideNotificationRequest();
+                if (permission === "granted") {
+                    sendNotification("Notifications enabled!", "You'll receive updates about your progress.");
+                }
+            });
+        }
+
+        function sendNotification(title, body, icon = null) {
+            if (Notification.permission === "granted") {
+                const notification = new Notification(title, {
+                    body: body,
+                    icon: icon || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Ccircle cx='25' cy='25' r='20' fill='%234ade80'/%3E%3C/svg%3E"
+                });
+
+                notification.onclick = function() {
+                    window.focus();
+                    notification.close();
+                };
+            }
+        }
+
+        // Modify performDailyCheckin to include notifications
+        function performDailyCheckin() {
+            const today = new Date().toDateString();
+            const yesterday = new Date(Date.now() - 86400000).toDateString();
+
+            userData.checkins[today] = true;
+
+            if (userData.checkins[yesterday]) {
+                userData.streak++;
+                createConfetti();
+                
+                // Send streak notifications
+                if (userData.streak === 7) {
+                    sendNotification("One Week Streak! 🎉", 
+                        "Amazing! You've completed a full week of learning!");
+                } else if (userData.streak === 30) {
+                    sendNotification("Monthly Master! 🏆", 
+                        "Incredible! A full month of consistent learning!");
+                } else if (userData.streak % 10 === 0) {
+                    sendNotification("Streak Milestone! 🌟", 
+                        `You've maintained a ${userData.streak}-day streak!`);
+                } else {
+                    sendNotification("Daily Check-in Complete! ✅", 
+                        `You're on a ${userData.streak}-day streak! Keep it up!`);
+                }
+            } else {
+                userData.streak = 1;
+                sendNotification("New Start! 💪", 
+                    "Starting fresh! Let's build a new streak!");
+            }
+
+            userData.lastCheckin = today;
+            saveUserData();
+            updateCalendar();
+
+            // Check completion
+            const totalTasks = Object.keys(tasks).length;
+            const completedTasks = Object.values(tasks).filter(task => task.completed).length;
+            if (completedTasks === totalTasks) {
+                sendNotification("Journey Complete! 🎓", 
+                    "Congratulations! You've completed the entire programming roadmap!");
+                createConfetti();
+            }
+
+            // Celebration animation
+            const header = document.querySelector('.tracker-header');
+            header.classList.add('celebrate');
+            setTimeout(() => header.classList.remove('celebrate'), 500);
+        }
+
+        // Add milestone notifications to task completion
+        function toggleTask(taskId) {
+            tasks[taskId].completed = !tasks[taskId].completed;
+            
+            if (tasks[taskId].completed) {
+                const totalTasks = Object.keys(tasks).length;
+                const completedTasks = Object.values(tasks).filter(task => task.completed).length;
+                const progressPercentage = Math.round((completedTasks / totalTasks) * 100);
+                
+                if (progressPercentage % 25 === 0) {
+                    sendNotification("Progress Milestone! 📚", 
+                        `You've completed ${progressPercentage}% of the curriculum!`);
+                }
+            }
+            
+            saveTasks();
+            updateTracker();
+        }
+
+        // Initialize notification check on load
+        window.onload = function() {
+            loadUserData();
+            initializeTasks();
+            updateCalendar();
+            checkNotificationPermission();
+        };
+        // 
+        let tasks = JSON.parse(localStorage.getItem('programmingTasks')) || {};
+        
+        function saveTasks() {
+            localStorage.setItem('programmingTasks', JSON.stringify(tasks));
+            updateProgress();
+        }
+
+        function initializeTasks() {
+            document.querySelectorAll('.project').forEach((project, index) => {
+                const projectTitle = project.querySelector('h4').textContent;
+                const taskId = `task-${index}`;
+                
+                if (!(taskId in tasks)) {
+                    tasks[taskId] = {
+                        title: projectTitle,
+                        completed: false
+                    };
+                }
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.className = 'task-checkbox';
+                checkbox.checked = tasks[taskId].completed;
+                checkbox.onclick = () => toggleTask(taskId);
+                
+                project.querySelector('h4').insertBefore(checkbox, project.querySelector('h4').firstChild);
+            });
+            
+            saveTasks();
+            updateTracker();
+        }
+
+        function toggleTask(taskId) {
+            tasks[taskId].completed = !tasks[taskId].completed;
+            saveTasks();
+            updateTracker();
+        }
+
+        function updateProgress() {
+            const totalTasks = Object.keys(tasks).length;
+            const completedTasks = Object.values(tasks).filter(task => task.completed).length;
+            const progressPercentage = Math.round((completedTasks / totalTasks) * 100);
+            
+            document.getElementById('progressBar').style.width = `${progressPercentage}%`;
+            document.getElementById('progressText').textContent = `${progressPercentage}%`;
+        }
+
+        function updateTracker() {
+            const trackerContent = document.getElementById('trackerContent');
+            trackerContent.innerHTML = '';
+            
+            Object.entries(tasks).forEach(([taskId, task]) => {
+                const taskElement = document.createElement('div');
+                taskElement.className = 'task-item';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.checked = task.completed;
+                checkbox.onclick = () => toggleTask(taskId);
+                
+                const label = document.createElement('span');
+                label.textContent = task.title;
+                if (task.completed) {
+                    label.className = 'completed';
+                }
+                
+                taskElement.appendChild(checkbox);
+                taskElement.appendChild(label);
+                trackerContent.appendChild(taskElement);
+            });
+        }
+
+        function showTracker() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('trackerPanel').style.display = 'block';
+            updateTracker();
+        }
+
+        function hideTracker() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('trackerPanel').style.display = 'none';
+        }
+
+        window.onload = initializeTasks;
+    </script>
+</body>
+</html>
